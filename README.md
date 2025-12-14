@@ -35,11 +35,7 @@ biowaste-portfolio/
 ├── README.md               # Documentación (este archivo)
 │
 └── images/                 # Carpeta para imágenes (crear manualmente)
-    ├── hero/              # Imágenes del hero section
-    ├── services/          # Imágenes de servicios
-    ├── sectors/           # Imágenes de sectores
-    ├── process/           # Imágenes del proceso
-    └── gallery/           # Galería adicional
+
 ```
 
 ---
