@@ -21,16 +21,6 @@
     box-sizing: border-box;
 }
 
-
-.head, img {
-  max-width: 100%;
-  height: auto;
-     width: 800px;
-    height: 300px; 
-    display: block;   /* Convierte la imagen en bloque */
-    margin-left: auto;  /* Empuja desde la izquierda */
-    margin-right: auto; /* Empuja desde la derecha */
-    }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
@@ -42,15 +32,109 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Navbar Personalizada - NO FIJO */
+/* ================================
+   SISTEMA DE IMÁGENES RESPONSIVE
+   ================================ */
+
+/* Todas las imágenes son responsive por defecto */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor para imágenes centradas */
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Imagen del hero - responsive */
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 2rem;
+}
+
+/* Imagen del logo - responsive */
+.logo-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 3rem auto;
+    display: block;
+}
+
+/* Imagen de contacto - responsive */
+.contact-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 15px;
+    margin: 2rem auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes responsive para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+    .hero-image {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-image {
+        max-width: 600px;
+    }
+    .logo-image {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-width: 100%;
+        margin: 0 0 2rem;
+    }
+    .logo-image {
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+    .contact-image {
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+    .img-container {
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-image {
+        border-radius: 10px;
+    }
+    .contact-image {
+        border-radius: 10px;
+    }
+    .img-container {
+        margin: 1rem auto;
+    }
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
+
 .navbar {
     transition: all 0.3s ease;
     position: relative !important;
-}
-
-.navbar-static {
-    position: relative !important;
-    top: auto !important;
 }
 
 .navbar-brand {
@@ -86,7 +170,10 @@ html {
     width: 80%;
 }
 
-/* Hero Section */
+/* ================================
+   HERO SECTION
+   ================================ */
+
 .hero-section {
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     position: relative;
@@ -128,7 +215,10 @@ html {
     }
 }
 
-/* Benefit Cards */
+/* ================================
+   BENEFIT CARDS
+   ================================ */
+
 .benefit-card {
     background: white;
     border-radius: 15px;
@@ -153,7 +243,10 @@ html {
     margin: 0 auto;
 }
 
-/* Service Cards */
+/* ================================
+   SERVICE CARDS
+   ================================ */
+
 .service-card {
     transition: all 0.3s ease;
     border-radius: 15px;
@@ -165,16 +258,14 @@ html {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.service-card .card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
 .service-card i {
     display: block;
 }
 
-/* Process Steps */
+/* ================================
+   PROCESS STEPS
+   ================================ */
+
 .process-step {
     background: linear-gradient(to right, #f0fdf4 0%, #ffffff 100%);
     border-left: 4px solid var(--primary-green);
@@ -201,7 +292,10 @@ html {
     box-shadow: 0 4px 15px rgba(25, 135, 84, 0.3);
 }
 
-/* Sector Cards */
+/* ================================
+   SECTOR CARDS
+   ================================ */
+
 .sector-card {
     background: white;
     border-radius: 15px;
@@ -219,7 +313,10 @@ html {
     display: block;
 }
 
-/* CTA Section */
+/* ================================
+   CTA SECTION
+   ================================ */
+
 .cta-section {
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     position: relative;
@@ -241,7 +338,10 @@ html {
     z-index: 1;
 }
 
-/* Contact Section */
+/* ================================
+   CONTACT SECTION
+   ================================ */
+
 .contact-info a {
     text-decoration: none;
     transition: all 0.3s ease;
@@ -253,12 +353,18 @@ html {
     color: var(--primary-green-dark) !important;
 }
 
-/* Footer */
+/* ================================
+   FOOTER
+   ================================ */
+
 footer {
     background-color: #1a1a1a;
 }
 
-/* Buttons */
+/* ================================
+   BUTTONS
+   ================================ */
+
 .btn-light:hover {
     background-color: #f8f9fa;
     transform: scale(1.05);
@@ -274,7 +380,10 @@ footer {
     border-color: var(--primary-green-dark);
 }
 
-/* Utilities */
+/* ================================
+   UTILITIES
+   ================================ */
+
 .text-success {
     color: var(--primary-green) !important;
 }
@@ -283,7 +392,10 @@ footer {
     background-color: var(--primary-green) !important;
 }
 
-/* Responsive Adjustments */
+/* ================================
+   RESPONSIVE ADJUSTMENTS
+   ================================ */
+
 @media (max-width: 768px) {
     .hero-section h1 {
         font-size: 2.5rem;
@@ -325,7 +437,10 @@ footer {
     }
 }
 
-/* Animations */
+/* ================================
+   ANIMATIONS
+   ================================ */
+
 @keyframes slideInUp {
     from {
         opacity: 0;
@@ -341,7 +456,6 @@ footer {
     animation: slideInUp 0.8s ease-out;
 }
 
-/* Loading Animation */
 @keyframes pulse {
     0%, 100% {
         opacity: 1;
@@ -355,17 +469,18 @@ footer {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Scroll Padding */
+/* ================================
+   SCROLL PADDING
+   ================================ */
+
 section {
     scroll-margin-top: 20px;
 }
 
-/* Body sin padding superior */
-body {
-    padding-top: 0 !important;
-}
+/* ================================
+   CUSTOM SCROLLBAR
+   ================================ */
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -383,14 +498,20 @@ body {
     background: var(--primary-green-dark);
 }
 
-/* Accessibility */
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+
 a:focus,
 button:focus {
     outline: 2px solid var(--primary-green);
     outline-offset: 2px;
 }
 
-/* Print Styles */
+/* ================================
+   PRINT STYLES
+   ================================ */
+
 @media print {
     .navbar,
     .cta-section,
